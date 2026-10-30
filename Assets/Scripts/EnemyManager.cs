@@ -27,10 +27,10 @@ public class EnemyManager : MonoBehaviour
     {
         Debug.Log(
             "Controles de enemigos\n" +
-            "   - Tecla [S]: Aparecer (Spawn) un nuevo enemigo -> (.Add())\n" +
-            "   - Tecla [K]: Eliminar (Kill) al primer enemigo activo -> (.Remove())\n" +
+            "   - Tecla [S]: Aparecer un nuevo enemigo\n" +
+            "   - Tecla [K]: Eliminar al primer enemigo activo\n" +
             "   - Tecla [L]: Listar todos los enemigos activos en la consola\n" +
-            "   - Tecla [C]: Limpiar todos los enemigos -> (.Clear())\n" +
+            "   - Tecla [C]: Limpiar todos los enemigos\n" +
             ""
         );
     }
@@ -65,14 +65,14 @@ public class EnemyManager : MonoBehaviour
 
         enemigosActivos.Add(nuevoEnemigo);
 
-        Debug.Log($"[SPAWN] ¡Ha aparecido '{nuevoEnemigo.nombre}'! " +
+        Debug.Log($"[Spawn] ¡Ha aparecido '{nuevoEnemigo.nombre}'! " +
                   $"| Total activos en la lista: {enemigosActivos.Count}");
     }
     public void EliminarPrimerEnemigo()
     {
         if (enemigosActivos.Count == 0)
         {
-            Debug.LogWarning("[GESTOR] No hay enemigos activos en la escena para eliminar.");
+            Debug.LogWarning("No hay enemigos activos en la escena para eliminar.");
             return;
         }
 
@@ -80,7 +80,7 @@ public class EnemyManager : MonoBehaviour
 
         enemigosActivos.Remove(enemigoMuerto);
 
-        Debug.Log($"[MUERTE] ¡'{enemigoMuerto.nombre}' ha sido derrotado! Se eliminó de la lista. " +
+        Debug.Log($"[Kill] ¡'{enemigoMuerto.nombre}' ha sido derrotado! Se eliminó de la lista. " +
                   $"| Quedan activos: {enemigosActivos.Count}");
     }
     public void MostrarEnemigosActivos()
@@ -104,7 +104,7 @@ public class EnemyManager : MonoBehaviour
 
         enemigosActivos.Clear();
 
-        Debug.Log($"[CLEAR] Se limpiaron todos los enemigos ({cantidadAnterior}). " +
+        Debug.Log($"[Clear] Se limpiaron todos los enemigos ({cantidadAnterior}). " +
                   $"Total activos ahora: {enemigosActivos.Count}");
     }
 }

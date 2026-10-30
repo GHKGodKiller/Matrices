@@ -27,16 +27,16 @@ public class HotbarController : MonoBehaviour
     private void MostrarInstrucciones()
     {
         Debug.Log(
-            "CONTROLES De accesorios\n" +
+            "controles de accesorios\n" +
             "1. Seleccionar item\n" +
             "   - Tecla [E]: Espada de Hierro\n" +
             "   - Tecla [V]: Pocion de Vida\n" +
             "   - Tecla [A]: Antorcha\n" +
             "   - Tecla [M]: Manzana\n" +
             "   - Tecla [D]: Pocion de Daño\n\n" +
-            "2. Acciones de Slor (1 al 5):\n" +
+            "2. Acciones de Slot (1 al 5):\n" +
             "   - [Número]: Meter o Cambiar item del slot por el item en mano.\n" +
-            "   - [Shift + Número]: Tirar / Descartar item del slot.\n" +
+            "   - [Shift + Número]: Tirar / item del slot.\n" +
             "   - [Alt + Número]: Usar ítem del slot.\n" +
             ""
         );
